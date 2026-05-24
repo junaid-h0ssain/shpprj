@@ -1,0 +1,14 @@
+services:
+  db:
+    image: postgres:17
+    hostname: dokan
+    ports:
+      - "5432:5432"
+    environment:
+      - POSTGRES_PASSWORD=4466
+      - POSTGRES_USER=postgres
+      - POSTGRES_DB=dokan
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+volumes:
+  pgdata:
