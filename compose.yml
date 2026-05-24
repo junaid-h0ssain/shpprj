@@ -1,9 +1,9 @@
 services:
   db:
-    image: postgres:17
+    image: postgres:16.14-alpine
     hostname: dokan
     ports:
-      - "5432:5432"
+      - "${DB_PORT:-5433}:5432"
     environment:
       - POSTGRES_PASSWORD=4466
       - POSTGRES_USER=postgres
