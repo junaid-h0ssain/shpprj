@@ -29,7 +29,7 @@ public class Products {
 
     private String description;
 
-    @NotBlank(message = "Price is required")
+    @NotNull(message = "Price is required")
     @DecimalMin(value = "0.0", inclusive = false, message = "Price cannot be below 0.0")
     @Column(nullable = false)
     private BigDecimal price;
